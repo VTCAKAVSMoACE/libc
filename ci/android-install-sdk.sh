@@ -16,19 +16,19 @@ unzip -q -d sdk/cmdline-tools commandlinetools-linux-${SDK}_latest.zip
 
 case "$1" in
   arm | armv7)
-    api=24
+    api=30
     image="system-images;android-${api};default;armeabi-v7a"
     ;;
   aarch64)
-    api=24
+    api=30
     image="system-images;android-${api};google_apis;arm64-v8a"
     ;;
   i686)
-    api=28
+    api=30
     image="system-images;android-${api};default;x86"
     ;;
   x86_64)
-    api=28
+    api=30
     image="system-images;android-${api};default;x86_64"
     ;;
   *)
@@ -51,8 +51,8 @@ echo '#Fri Nov 03 10:11:27 CET 2017 count=0' >> /root/.android/repositories.cfg
 #
 # | grep -v = || true    removes the progress bar output from the sdkmanager
 # which produces an insane amount of output.
-yes | ./sdk/cmdline-tools/tools/bin/sdkmanager --licenses --no_https | grep -v = || true
-yes | ./sdk/cmdline-tools/tools/bin/sdkmanager --no_https \
+yes | ./sdk/cmdline-tools/cmdline-tools/bin/sdkmanager --licenses --no_https | grep -v = || true
+yes | ./sdk/cmdline-tools/cmdline-tools/bin/sdkmanager --no_https \
         "emulator" \
         "platform-tools" \
         "platforms;android-${api}" \

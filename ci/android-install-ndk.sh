@@ -9,23 +9,23 @@ unzip -q ${NDK}-linux-x86_64.zip
 case "$1" in
   arm)
     arch=arm
-    api=28
+    api=30
     ;;
   armv7)
     arch=arm
-    api=28
+    api=30
     ;;
   aarch64)
     arch=arm64
-    api=28
+    api=30
     ;;
   i686)
     arch=x86
-    api=28
+    api=30
     ;;
   x86_64)
     arch=x86_64
-    api=28
+    api=30
     ;;
   *)
     echo "invalid arch: $1"
