@@ -2823,6 +2823,8 @@ extern "C" {
     pub fn regfree(preg: *mut ::regex_t);
 
     pub fn android_set_abort_message(msg: *const ::c_char);
+
+    pub fn memfd_create(name: *const ::c_char, flags: ::c_uint) -> ::c_int;
 }
 
 cfg_if! {
